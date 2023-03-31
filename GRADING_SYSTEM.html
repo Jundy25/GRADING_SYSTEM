@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device=wid, initial-scale=1">
+        <title>GRADING SYSTEM</title>
+    </head>
+        <style>
+           .bg {
+                /* The image used */
+                background-image: url("graph.jpg");
+
+                width: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+
+            .box{
+                font-family: 'Century Gothic';
+                background-color: powderblue;
+                color: black;
+                border: 4px solid whitesmoke;
+                margin: px;	
+                padding: 35px;
+                float: center;
+                text-align: justify;
+                width: 400px;
+		    }
+
+            .border{
+                border: 2px solid blue;
+            }
+        </style>
+    <body class= bg>
+        <div class="box border">
+        <p>Math</p>
+        <input id = "S1" type="text">
+
+        <p>Science</p>
+        <input id = "S2" type="text">
+
+        <p>P.E.</p>
+        <input id = "S3" type="text">
+
+        <p>Filipino</p>
+        <input id = "S4" type="text">
+
+        <p>English</p>
+        <input id = "S5" type="text">
+
+        <p>Programming</p>
+        <input id = "S6" type="text">
+
+        <p>Web Systems</p>
+        <input id = "S7" type="text"><br><br><br>
+
+        <button type="button" onclick="getAVG()">SUBMIT</button>
+        </div>
+
+    </body>
+
+<script type="text/javascript">
+    function getAVG(){
+        var S1=parseInt(document.getElementById("G1").value)
+        var S2=parseInt(document.getElementById("G2").value)
+        var S3=parseInt(document.getElementById("G3").value)
+        var S4=parseInt(document.getElementById("G4").value)
+        var S5=parseInt(document.getElementById("G5").value)
+        var S6=parseInt(document.getElementById("G6").value)
+        var S7=parseInt(document.getElementById("G7").value)
+
+        var sum = G1 + G2 + G3 + G4 + G5 + G6 + G7;
+        let AVG = sum/7;
+        
+        
+        if(AVG > 100){
+            alert("Average:  " + AVG.toFixed(0) + "   //   DOES NOT EXIST\n" + 
+                "Remarks:   DOES NOT EXIST")
+        }
+        else if(AVG >= 90 && AVG <=100){
+            alert("Average:  " + AVG.toFixed(0) + "   //   OUTSTANDING\n" + 
+                "Remarks:   PASSED")
+        }
+        else if(AVG >= 85 && AVG <=89){
+            alert("Average:  " + AVG.toFixed(0) + "   //   VERY SATISFACTORY\n" + 
+                "Remarks:   PASSED")
+        }
+        else if(AVG >= 80 && AVG <=84){
+            alert("Average:  " + AVG.toFixed(0) + "   //   SATISFACTORY\n" + 
+                "Remarks:   PASSED")
+        }
+        else if(AVG >= 75 && AVG <=79){
+            alert("Average:  " + AVG.toFixed(0) + "   //   FAIRLY SATISFACTORY\n" + 
+                "Remarks:   PASSED")
+        }
+        else if(AVG < 75){
+            alert("Average:  " + AVG.toFixed(0) + "   //   DID NOT MEET EXPECTATIONS\n" + 
+                "Remarks:   FAILED")
+        }
+    }
+</script>
+
+</html>
